@@ -1,0 +1,65 @@
+NAME
+    SQL::ReservedWords::DB2 - Reserved SQL words by DB2
+
+SYNOPSIS
+       if ( SQL::ReservedWords::DB2->is_reserved( $word ) ) {
+           die "$word is a reserved DB2 word!";
+       }
+
+       # or
+
+       use SQL::ReservedWords::DB2 'is_reserved';
+
+       if ( is_reserved( $word ) ) {
+           die "$word is a reserved DB2 word!";
+       }
+
+DESCRIPTION
+    Determine if words are reserved by DB2.
+
+METHODS
+    is_reserved( $word )
+        Returns a boolean indicating if $word is reserved by either DB2 5,
+        6, 7 or 8.
+
+    is_reserved_by_db2v5( $word )
+        Returns a boolean indicating if $word is reserved by DB2 5.
+
+    is_reserved_by_db2v6( $word )
+        Returns a boolean indicating if $word is reserved by DB2 6.
+
+    is_reserved_by_db2v7( $word )
+        Returns a boolean indicating if $word is reserved by DB2 7.
+
+    is_reserved_by_db2v8( $word )
+        Returns a boolean indicating if $word is reserved by DB2 8.
+
+    reserved_by( $word )
+        Returns a list with DB2 versions that reserves $word.
+
+    words
+        Returns a list with all reserved words.
+
+EXPORTS
+    Nothing by default. Following subroutines can be exported:
+
+    is_reserved
+    is_reserved_by_db2v5
+    is_reserved_by_db2v6
+    is_reserved_by_db2v7
+    is_reserved_by_db2v8
+    reserved_by
+    words
+
+SEE ALSO
+    SQL::ReservedWords
+
+    <http://www-306.ibm.com/software/data/db2/udb/>
+
+AUTHOR
+    Christian Hansen "ch@ngmedia.com"
+
+COPYRIGHT
+    This program is free software, you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+
